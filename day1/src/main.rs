@@ -4,9 +4,9 @@ use std::fs::File;
 
 
 /// Returns the n largest values in v in ascending order.
-fn nmax(n: usize, v: &mut [u32]) -> Vec<u32> {
+fn nmax(n: usize, v: &mut [u32]) -> u32 {
     v.sort();
-    v[v.len() - n..v.len()].to_vec()
+    v[v.len() - n..v.len()].iter().sum()
 }
 
 fn main() -> io::Result<()> {
